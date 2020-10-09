@@ -1,0 +1,49 @@
+{
+    "response": {
+        "job": [
+            {
+                "id": "[MediaID]",
+                "userid": "<<id>>",
+                "sourcefile": "[SourceFile]",
+                "status": "[MediaStatus]",
+                "notifyurl": "[NotifyURL]",
+                "created": "[Date]",
+                "started": "[Date]",
+                "finished": "[Date]",
+                "prevstatus": "[MediaStatus]",
+                "downloaded": "[Date]",
+                "filesize": "[FileSize]",
+                "processor": "[AMAZON | RACKSPACE]",
+                "progress": "[TotalProgress]",
+                "time_left": "[TotalTimeLeft]",
+                "format": [
+                    {
+                        "id": "[ID]",
+                        "status": "[Status]",
+                        "created": "[Date]",
+                        "started": "[Date]",
+                        "finished": "[Date]",
+                        "s3_destination": "[TempS3Link]",
+                        "cf_destination": "[TempCFLink]",
+                        "convertedsize": "[FileSize]",
+                        "time_left": "[TotalTimeLeft]",
+                        "progress": "[TotalProgress]",
+                        "time_left_current": "[StatusTimeLeft]",
+                        "progress_current": "[StatusPorgress]",
+                        "file_size": "[FileSize]",
+                        "destination": [
+                            "[URL]",
+                            "[URL_2]",
+                            "[URL_N]"
+                        ],
+                        "destination_status": [
+                            "[Saved|Error (ErrorDescription)]",
+                            "[Saved|Error (ErrorDescription)]",
+                            "[Saved|Error (ErrorDescription)]"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
