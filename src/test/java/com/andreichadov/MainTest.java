@@ -82,16 +82,12 @@ public class MainTest {
         /*Проверяем соответствие URL*/
         Assert.assertEquals(driver.getCurrentUrl(),"https://api.encoding.com/reference/responses-getstatus-extended");
 
-        /*Копируем JSON и создаем соответствующий файл в проекте*/
+        /*Копируем JSON в буфер обмена*/
         getStatusExtendedPage.clickOnJsonResponseBtn();
         getStatusExtendedPage.copyJsonResponseToClipboard();
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("test-response.json"))){
-            writer.write(getClipboardContents());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        /*Получем нужные поля из json файла*/
+
+        /*Создаем JSONObject с помощью данных из буфера обмена и получем нужные поля*/
         JSONObject userJson = new JSONObject(getClipboardContents());
         JSONArray job = userJson.getJSONObject("response").getJSONArray("job");
         JSONArray format = null;
